@@ -1,0 +1,21 @@
+<h1 class="text-center">
+    <strong>Heroes</strong> de Marvel y DC
+</h1>
+
+<div class="row justify-content-center ">
+    <div class="card text-center col-3 m-3" *ngFor="let heroe of servicio.getHeroes, let i = index">
+        <div class="card-header">
+            <img [src]="heroe.img" alt="Imagen del heroe" class="card-img-top">
+            <h5 class="card-title">{{heroe.nombre}}</h5>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{heroe.bio}}</p>
+            <p class="card-text" class="text-muted">{{heroe.aparicion}}</p>
+            <p class="card-text">{{heroe.casa}}</p>
+        </div>
+        <div class="car-footer">
+            <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary btn-block">Ver mas</a>
+        </div>
+    </div>
+
+</div>
