@@ -69,9 +69,7 @@ export class HeroeService {
     return this.heroes[i];
   }
   buscarHeroe(nombre: string): number{
-    return this.heroes.findIndex( p => {
-      p.nombre=== nombre
-    });
+    return this.heroes.findIndex( p => p.nombre=== nombre);
   }
 }
 
